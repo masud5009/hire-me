@@ -20,29 +20,53 @@ document.addEventListener('mousemove', (e) => {
 });
 
 /*========== swiper slide =============*/
-const swiper = new Swiper('.swiper', {
-    spaceBetween: 30,
-    speed: 1000,
-    autoplay: {
-        delay: 3000,
-    },
-    slidesPerView: 2,
-    pagination: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1
+    new Swiper('.swiper', {
+        spaceBetween: 30,
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
         },
-        576: {
-            slidesPerView: 2
+        slidesPerView: 2,
+        pagination: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
-        1200: {
-            slidesPerView: 2
+        breakpoints: {
+            320: {
+                slidesPerView: 1
+            },
+            576: {
+                slidesPerView: 2
+            },
+            1200: {
+                slidesPerView: 2
+            },
         },
-    },
-});
+    });
 
 
+    new Swiper('.payment-method', {
+        spaceBetween: 30,
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
+        },
+        slidesPerView: 6,
+        pagination: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1
+            },
+            576: {
+                slidesPerView: 2
+            },
+            1200: {
+                slidesPerView: 2
+            },
+        },
+    });

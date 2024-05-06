@@ -224,6 +224,19 @@ a {
     bottom: -5px;
 }
 
+/*feq css */
+.feq-option a {
+    background-color: transparent;
+    color: var(--dark-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.feq-option i {
+    color: var(--primary-color);
+}
+
 /*footer css*/
 footer {
     background-color: var(--dark-color);
@@ -245,7 +258,18 @@ footer {
     position: relative;
     margin: 5px;
 }
-
+.feq-option{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.feq-option .card{
+    border: none;
+}
+.payment-method{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 /* responsive desing */
 @media (max-width:768px) {
     .workprocess-section .work-type-div {
@@ -257,6 +281,7 @@ footer {
     .workprocess-section .title {
         padding-top: 20px;
     }
+
     .footer-content {
         display: flex;
         flex-direction: column;
