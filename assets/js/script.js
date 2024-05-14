@@ -13,60 +13,60 @@ window.addEventListener('scroll', () => {
 AOS.init()
 
 
-/*========== image move =============*/
-document.addEventListener('mousemove', (e) => {
-    const image = document.getElementById('moving-image');
-    image.style.transform = `translateX(20px, 20px)`;
-});
+/*========== nice select =============*/
+$(document).ready(function() {
+    $('select').niceSelect();
+  });
 
 /*========== swiper slide =============*/
-    new Swiper('.swiper', {
-        spaceBetween: 30,
-        speed: 1000,
-        autoplay: {
-            delay: 3000,
+new Swiper('.swiper', {
+    spaceBetween: 30,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+    },
+    slidesPerView: 2,
+    pagination: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1
         },
-        slidesPerView: 2,
-        pagination: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+        576: {
+            slidesPerView: 2
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1
-            },
-            576: {
-                slidesPerView: 2
-            },
-            1200: {
-                slidesPerView: 2
-            },
+        1200: {
+            slidesPerView: 2
         },
-    });
+    },
+});
 
 
-    new Swiper('.payment-method', {
-        spaceBetween: 30,
-        speed: 1000,
-        autoplay: {
-            delay: 3000,
+new Swiper('.payment-method', {
+    spaceBetween: 30,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+    },
+    slidesPerView: 6,
+    pagination: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1
         },
-        slidesPerView: 6,
-        pagination: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+        576: {
+            slidesPerView: 2
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1
-            },
-            576: {
-                slidesPerView: 2
-            },
-            1200: {
-                slidesPerView: 2
-            },
+        1200: {
+            slidesPerView: 2
         },
-    });
+    },
+});
+

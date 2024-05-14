@@ -17,10 +17,31 @@
 body {
     font-family: "Roboto", sans-serif;
     color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+li {
+    list-style: none;
 }
 
 a {
     text-decoration: none;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.nice-select:after {
+    border-bottom: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+}
+
+.nice-select.open,
+.nice-select:active,
+.nice-select:focus {
+    border-color: var(--primary-color)
 }
 
 .btn-primary {
@@ -115,6 +136,11 @@ a {
 }
 
 /* category section css */
+.category-section .card:hover i {
+    transform: scaleX(-1);
+    transition: transform .3s ease;
+}
+
 .category-section .title {
     color: var(--dark-color);
     font-weight: 700;
@@ -237,10 +263,89 @@ a {
     color: var(--primary-color);
 }
 
+/*gigs*/
+
+.gig-section .card {
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.gig-section .gigs{
+    display: flex;
+}
+.gig-section .card .card-title a{
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+}
+.gig-section .card:hover .card-title a{
+    color: var(--primary-color);
+}
+.gig-section .card img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.gig-section .card:hover img {
+    transform: scale(1.1);
+}
+
+
+
+.gig-section .card i {
+    color: var(--primary-color);
+}
+
+.gig-section .price {
+    font-weight: 500;
+}
+
+.gig-section .review-count {
+    font-size: 15px;
+}
+
+.gig-section .rating-count {
+    color: var(--dark-color);
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination a {
+    color: var(--dark-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination a.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+  }
+  
+  .pagination a.prev,
+  .pagination a.next {
+    font-weight: bold;
+  }
+  
+  .pagination a.prev:hover,
+  .pagination a.next:hover {
+    background-color: var(--primary-color);
+  }
+  
 /*footer css*/
 footer {
     background-color: var(--dark-color);
     color: var(--white-color);
+    position: relative;
+    bottom: 0px;
+    z-index: 1;
 }
 
 .footer-content {
@@ -258,18 +363,29 @@ footer {
     position: relative;
     margin: 5px;
 }
-.feq-option{
+.social-link i:hover{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    transition: .3s ease;
+}
+
+.feq-option {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.feq-option .card{
+
+.feq-option .card {
     border: none;
 }
-.payment-method{
+
+.payment-method {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
+
+/*========================== inner page css ==================*/
+
 /* responsive desing */
 @media (max-width:768px) {
     .workprocess-section .work-type-div {
